@@ -3,9 +3,14 @@
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Original CSS
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css"> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+                  -->
+<link rel="stylesheet" href="W3_Framework.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="fonts.css">
 <body>
 
 <!-- Side Navigation -->
@@ -53,10 +58,11 @@
 <div class="w3-row-padding w3-center w3-margin-top">
 <div class="w3-third">
   <div class="w3-card w3-container" style="min-height:325px">
+    <a href="pg1-guitars.html" class="w3-bar-item w3-button">
   <h3>Guitars</h3><br>
-  <img src="https://static.thenounproject.com/png/77928-200.png" alt="Guitar">
+  <img src="gtr-icon.png" alt="Guitar">
   <i class="w3-text-theme" style="font-size:120px"></i>
-  <p> My Guitar Collection </p>
+  <p> My Guitar Collection </p></a>
   </div>
 </div>
 
@@ -133,6 +139,18 @@
   <h2>Gibson Les Paul Custom</h2>
   <p>London is the capital city of England.</p>
   <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+  
+  <h2 class="w3-center">Pictures</h2>
+  <div class="w3-content" style="max-width:750px;position:relative">
+  
+  <img class="mySlides w3-animate-opacity" src="les-paul-custom-front.png" style="width:70%">
+  <img class="mySlides w3-animate-opacity" src="les-paul-custom-back.jpg" style="width:90%">
+  <img class="mySlides w3-animate-opacity" src="les-paul-custom-side.jpg" style="width:90%">
+  
+  <a class="w3-button w3-hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs(-1)">❮</a>
+  <a class="w3-button w3-hover-dark-grey" style="position:absolute;top:45%;right:0;" onclick="plusDivs(+1)">❯</a>
+  </div>
+
 </div>
 
 <div id="PRS" class="w3-container city w3-animate-opacity">
@@ -148,14 +166,14 @@
 </div>
 </div>
 
-<!-- Slideshow (for guitars and equip page)-->
+<!-- Slideshow (for guitars and equip page, put into each tab)
 
 <h2 class="w3-center">Slideshows</h2>
 <div class="w3-content" style="max-width:750px;position:relative">
 
-<img class="mySlides w3-animate-opacity" src="https://www.stars-music.com/medias/gibson/custom-shop-les-paul-custom-2019-eb-hd-159946.png" style="width:70%">
-<img class="mySlides w3-animate-opacity" src="https://www.stars-music.com/medias/gibson/custom-shop-les-paul-custom-2019-eb-hd-2-159946.jpg" style="width:90%">
-<img class="mySlides w3-animate-opacity" src="https://www.stars-music.com/medias/gibson/custom-shop-les-paul-custom-2019-eb-hd-3-159946.jpg" style="width:90%">
+<img class="mySlides w3-animate-opacity" src="les-paul-custom-front.png" style="width:70%">
+<img class="mySlides w3-animate-opacity" src="les-paul-custom-back.jpg" style="width:90%">
+<img class="mySlides w3-animate-opacity" src="les-paul-custom-side.jpg" style="width:90%">
 
 <a class="w3-button w3-hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs(-1)">❮</a>
 <a class="w3-button w3-hover-dark-grey" style="position:absolute;top:45%;right:0;" onclick="plusDivs(+1)">❯</a>
@@ -249,21 +267,6 @@ function showDivs(n) {
 
 showDivs(1);
 
-// Progress Bars
-function move() {
-  var elem = document.getElementById("myBar");   
-  var width = 5;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width == 100) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-      elem.innerHTML = width * 1  + '%';
-    }
-  }
-}
 </script>
 
 </body>
